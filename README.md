@@ -1,24 +1,67 @@
-# README
+# BLOG APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+The Blog app is a classic example of a blog website. This is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* Ruby version
+## Getting started
 
-* System dependencies
+To explore or play with this code you should :
 
-* Configuration
+- Download and install Git
+- Clone the repository (desrcibed below)
 
-* Database creation
+### `Getting Started`
 
-* Database initialization
+To get a local copy of this project:
 
-* How to run the test suite
+Clone this repository:
+   * Type in your terminal : `https://github.com/denscholar/Blog-App---ROR`
 
-* Services (job queues, cache servers, search engines, etc.)
+- Open the repository with `cd Blog-App---ROR`
+- Use your favorite Integrated Development Environment (e.g. for Visual Studio Code the command is `code .`)
 
-* Deployment instructions
+- To get started, In the root directory run:
+   * `gem install bundler`
+   * Then run: `bundle install`
 
-* ...
+
+### To track linter errors locally follow these steps:  
+
+Track Ruby linter errors run:`rubocop`
+
+To auto-correct Rubocop offenses run: `rubocop --auto-correct-all` 
+
+
+## Technologies Used
+
+- RUBY
+- RAILS
+- GitHub
+- PostgreSql
+
+## Author
+
+*Dennis Akagha*
+
+- GitHub: [@denscholar](https://github.com/denscholar)
+- Twitter: [@denscholar](https://twitter.com/dennisakagha)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/dennisakagha/)
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Please give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone contributed one way or the other.
+- Inspiration
+- etc
+
+## License
+
+This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed
