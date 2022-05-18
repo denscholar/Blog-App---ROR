@@ -1,1 +1,13 @@
-<h1>Shows a list of post</h1>
+<div class="posts">
+    <div class="post_comments">
+        <h4><%=@post.title%> by: <%=@post.author.name%></h4>
+        <span>Comments: <%=@post.commentsCounter%>, Likes: <%=@post.likesCounter%></span>
+    </div>
+    <p><%=@post.text%></p>
+</div>
+
+<div class= "comments">
+    <%@comment.each do |comment|%>
+        <p><%= comment.author.name %>: <%=comment.text%></p>
+    <%end%>
+</div>
