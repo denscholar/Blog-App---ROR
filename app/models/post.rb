@@ -20,7 +20,7 @@ class Post < ApplicationRecord
   end
 
   # A method that updates the posts counter for a user.
-  def update_post_counter
-    author.increment!(:posts_counter)
+  def update_posts_counter
+    users.author_id.increment!(:postsCounter)
   end
 end

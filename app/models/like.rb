@@ -5,6 +5,6 @@ class Like < ApplicationRecord
   # A method that updates the likes counter for a post.
 
   def update_likes_counter
-    post.increment!(:likes_counter)
+    post.increment!(:likesCounter)
   end
 end
