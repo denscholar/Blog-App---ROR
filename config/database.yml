@@ -11,11 +11,11 @@ default: &default
 
 development:
   <<: *default
-  database: blog_app
+  database: blog_app_development
 
 test:
   <<: *default
-  database: blog_app
+  database: blog_app_test
 
 production:
   <<: *default

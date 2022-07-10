@@ -3,7 +3,9 @@ class Comment < ApplicationRecord
   belongs_to :post, class_name: 'Post', foreign_key: 'post_id'
 
   # A method that updates the comments counter for a post.
+  after_save :update_comments_counter
+
   def update_comments_counter
-    post.increment!(:comments_counter)
+    post.increment!(:commentsCounter)
   end
 end
