@@ -9,7 +9,7 @@ RSpec.describe Post, type: :model do
 
     subject do
       Post.create(title: 'Alice in wonderlands', text: 'Beware the Jabberwock, my son!', commentsCounter: 0,
-                  likesCounter: 0, author_id: @user.id)
+                  likesCounter: 0, user_id: @user.id)
     end
 
     before { subject.save }
