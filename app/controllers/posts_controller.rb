@@ -12,7 +12,6 @@ class PostsController < ApplicationController
       render :new
     end
   end
-  
 
   def new
     @post = Post.new
