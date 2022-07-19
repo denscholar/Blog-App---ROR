@@ -1,0 +1,8 @@
+<div>
+<%= tag.h1('New Comment') %>
+<%= render 'layouts/alert', flash: flash %>
+<%= form_with model: [post, Comment.new] do |f| %>
+  <%= f.text_area :text, rows: 10, placeholder: 'Enter your comment' %>
+  <%= f.submit 'Save' %>
+<% end %>
+</div>

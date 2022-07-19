@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <%= tag.h4("#{comment.user.name}") %>
+    <%= tag.p(comment.text) %>
+  </div>
+  <% if can? :destroy, comment %>
+  <div>
+    <%= button_to 'Delete', post_comment_path(comment.post.id, comment.id), params: { post: { post_id: comment.post.id, comment_id: comment.id }}, method: :delete %>
+  </div>
+  <% end %>
+</div>

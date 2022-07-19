@@ -1,13 +1,8 @@
-<div class="posts">
-    <div class="post_comments">
-        <h4><%=@post.title%> by: <%=@post.user.name%></h4>
-        <span>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></span>
-    </div>
-    <p><%=@post.text%></p>
-</div>
-
-<div class= "comments">
-    <%@comment.each do |comment|%>
-        <p><%= comment.user.name %>: <%=comment.text%></p>
-    <%end%>
-</div>
+<%= render 'layouts/alert', flash: flash %>
+<%= render 'post_card', post: @post, detailed: true %>
+<% if @post.comments_counter > 0 %>
+  <div class="card__box">
+    <%= tag.h3('Comments:', class: 'card__title') %>
+    <%= render partial: 'comments/comment_card', collection: @post.comments, as: :comment %>
+  </div>
+<% end %>
