@@ -1,7 +1,16 @@
-<div class="sections">
-    <%= image_tag (user.photo), height: '115', width: '115' %>
-    <div class="users">
-        <h1><%= link_to (user.name), user%></h1>
-        <span>Number of posts: <%=user.posts_counter%></span>
-    </div>
-</div>
+<li>
+
+  <a href="/users/<%= user.id %>">
+    <%= content_tag(:div, tag.img(src: user.photo, alt: "#{user.name}'s photo", width: '150px'), class: 'card') %>
+  </a>
+
+  <h2><%= user.name %></h2>
+
+  <button type="button">
+    Number of posts:
+    <span>
+      <%= user.posts_counter ? user.posts_counter : 0 %>
+    </span>
+  </button>
+
+</li>

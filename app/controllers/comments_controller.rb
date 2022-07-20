@@ -1,11 +1,28 @@
 class CommentsController < ApplicationController
+  def new
+    @current_user = current_user
+    @post = Post.find(params[:post_id])
+    render :new, locals: { user: @current_user, post: @post }
+  end
+
+  def destroy
+    @comment = Comment.find(params[:post][:comment_id])
+    comment_user_id = @comment.user.id
+    @comment.destroy
+    redirect_to user_url(comment_user_id)
+  end
+
   def create
+    @current_user = current_user
     @comment = current_user.comments.new(comment_params)
-    @comment.post_id = params[:post_id]
+    @post = Post.find(params[:post_id])
+    @comment.post = @post
     if @comment.save
-      redirect_to user_post_path(current_user.id, params[:post_id])
+      flash[:success] = 'Comment saved successfully'
+      redirect_to user_post_url(@post.user.id, @post.id)
     else
-      render :create
+      flash.now[:error] = @comment.errors.full_messages.to_sentence
+      render :new, locals: { user: @current_user, post: @post }, status: 422
     end
   end
 

@@ -36,7 +36,7 @@ gem 'jbuilder'
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem 'bcrypt'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
@@ -59,6 +59,10 @@ group :development, :test do
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rspec-support'
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  # Capybara, the library that allows us to interact with the browser using Ruby
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -79,4 +83,6 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cancancan'
+gem 'devise'
 gem 'ffi'
