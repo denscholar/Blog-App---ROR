@@ -42,7 +42,6 @@ RSpec.describe 'User Show', type: :feature do
     end
 
     it "should display the user's first 3 posts" do
-      user_posts = page.all('div', class: 'card__box-post')
       expect(page).to have_text 'post E Dennis'
       expect(page).to have_text 'post D Dennis'
       expect(page).to have_text 'post C Dennis'

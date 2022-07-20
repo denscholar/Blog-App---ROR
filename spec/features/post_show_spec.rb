@@ -65,7 +65,6 @@ RSpec.describe 'Post show', type: :feature do
     end
 
     it "should display the post's commentors' names" do
-      peter_posts = page.all('h4', text: 'Peter:')
       any_posts = page.all('h4', text: 'Any:')
       expect(any_posts.count).to eq 0
     end

@@ -5,11 +5,11 @@ RSpec.describe "User's post index", type: :feature do
     User.destroy_all
     Post.destroy_all
     @user = User.create!(name: 'Dennis', email: 'Dennis@gmail.com', bio: "This is Dennis's bio", password: 'password',
-                        role: 'admin', confirmed_at: Time.now)
+                         role: 'admin', confirmed_at: Time.now)
     @user_b = User.create!(name: 'Peter', email: 'Peter@gmail.com', password: 'password', role: 'default',
-                          confirmed_at: Time.now)
+                           confirmed_at: Time.now)
     @user_c = User.create!(name: 'Any', email: 'any@gmail.com', password: 'password', role: 'default',
-                          confirmed_at: Time.now)
+                           confirmed_at: Time.now)
 
     Post.create(user: @user, title: 'post A Dennis', text: 'text A', comments_counter: 0, likes_counter: 0)
     Post.create(user: @user, title: 'post B Dennis', text: 'text B', comments_counter: 0, likes_counter: 0)
@@ -71,13 +71,11 @@ RSpec.describe "User's post index", type: :feature do
     end
 
     it "should display all the user's posts" do
-      user_posts = page.all('div', class: 'card__box-post')
       expect(page).to have_text 'post E Dennis'
       expect(page).to have_text 'post D Dennis'
       expect(page).to have_text 'post C Dennis'
       expect(page).to have_text 'post D Dennis'
       expect(page).to have_text 'post A Dennis'
-
     end
 
     it 'should display the first comment for a given post' do
