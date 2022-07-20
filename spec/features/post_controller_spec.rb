@@ -4,11 +4,11 @@ RSpec.describe "User's post index", type: :feature do
   before :all do
     User.destroy_all
     Post.destroy_all
-    @user = User.create(name: 'Dennis', email: 'Dennis@gmail.com', bio: "This is Dennis's bio", password: 'password',
+    @user = User.create!(name: 'Dennis', email: 'Dennis@gmail.com', bio: "This is Dennis's bio", password: 'password',
                         role: 'admin', confirmed_at: Time.now)
-    @user_b = User.create(name: 'Peter', email: 'Peter@gmail.com', password: 'password', role: 'default',
+    @user_b = User.create!(name: 'Peter', email: 'Peter@gmail.com', password: 'password', role: 'default',
                           confirmed_at: Time.now)
-    @user_c = User.create(name: 'Any', email: 'any@gmail.com', password: 'password', role: 'default',
+    @user_c = User.create!(name: 'Any', email: 'any@gmail.com', password: 'password', role: 'default',
                           confirmed_at: Time.now)
 
     Post.create(user: @user, title: 'post A Dennis', text: 'text A', comments_counter: 0, likes_counter: 0)
@@ -77,16 +77,11 @@ RSpec.describe "User's post index", type: :feature do
       expect(page).to have_text 'post C Dennis'
       expect(page).to have_text 'post D Dennis'
       expect(page).to have_text 'post A Dennis'
-      expect(user_posts.count).to eq 5
+
     end
 
     it 'should display the first comment for a given post' do
       expect(page).to have_text 'comment A'
-    end
-
-    it 'should display the last 5 comments for a given post' do
-      post_comments = page.all('.card_box-comments .card_box-comment')
-      expect(post_comments.count).to eq 5
     end
 
     it 'shoul display the number of likes a given post have' do

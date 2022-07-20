@@ -85,3 +85,4 @@ end
 
 gem 'devise'
 gem 'ffi'
+gem 'cancancan'

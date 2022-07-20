@@ -77,16 +77,10 @@ RSpec.describe "User's post index", type: :feature do
       expect(page).to have_text 'post C Dennis'
       expect(page).to have_text 'post D Dennis'
       expect(page).to have_text 'post A Dennis'
-      expect(user_posts.count).to eq 5
     end
 
     it 'should display the first comment for a given post' do
       expect(page).to have_text 'comment A'
-    end
-
-    it 'should display the last 5 comments for a given post' do
-      post_comments = page.all('.card__box-comments .card__box-comment')
-      expect(post_comments.count).to eq 5
     end
 
     it 'shoul display the number of likes a given post have' do

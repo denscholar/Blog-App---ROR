@@ -2,7 +2,7 @@
 
 # RSpec.describe Like, type: :model do
 #   describe 'Likes Validation' do
-#     it 'likesCounterr should be one' do
+#     it 'likes_counterr should be one' do
 #       user = User.new(name: 'Esther Alice', posts_counter: 0)
 #       user.save
 
