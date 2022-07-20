@@ -82,6 +82,11 @@ RSpec.describe "User's post index", type: :feature do
       expect(page).to have_text 'comment A'
     end
 
+    it "should display the post's number of comments" do
+      comments_button = find_button("comments_post-#{@post.id}")
+      expect(comments_button.text).to eq 'Comments: 7'
+    end
+
     it 'shoul display the number of likes a given post have' do
       likes_button = find_button("likes_post-#{@post.id}")
       expect(likes_button.text).to eq 'Unlike: 3'

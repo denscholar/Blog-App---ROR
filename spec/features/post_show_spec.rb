@@ -55,7 +55,7 @@ RSpec.describe 'Post show', type: :feature do
       expect(comments_button.text).to eq 'Comments: 7'
     end
 
-    it "shoul display the post's number of likes" do
+    it "should display the post's number of likes" do
       likes_button = find_button("likes_post-#{@post.id}")
       expect(likes_button.text).to eq 'Unlike: 3'
     end

@@ -13,7 +13,7 @@
 #       like = Like.new(user_id: user.id, post_id: post.id)
 #       like.save
 
-#       expect(like.post.likesCounter).to eq(1)
+#       expect(like.post.likes_counter).to eq(1)
 #     end
 #   end
 # end
