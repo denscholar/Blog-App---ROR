@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+ .main-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form > * {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#field {
+  display: flex;
+  margin: auto;
+  padding: 20px 10px 0 0;
+}
+
+input {
+  width: 60vw;
+}
+
+.actions {
+  margin: 20px;
+}
+
+#new_user > div.field {
+  margin: 20px 0;
+}
+
+body > section > div > h2 {
+  text-align: center;
+}
