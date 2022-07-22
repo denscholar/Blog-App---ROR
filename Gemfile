@@ -45,7 +45,7 @@ gem 'tzinfo-data'
 gem 'bootsnap', require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -59,6 +59,7 @@ group :development, :test do
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rspec-support'
+  gem "letter_opener"
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
   # Capybara, the library that allows us to interact with the browser using Ruby
