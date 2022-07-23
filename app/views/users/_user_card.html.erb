@@ -1,6 +1,6 @@
 <div>
   <div>
-    <%= image_tag @current_user.photo, alt: "#{current_user.name}'s photo", :style => "width: 100px;" %>
+     <%= content_tag(:div, tag.img(src: user.photo, alt: "#{user.name}'s photo", width: '150px'), class: 'card') %>
   </div>
   <div>
     <%= tag.h1(@current_user.name) %>
