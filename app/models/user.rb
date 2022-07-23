@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :trackable
@@ -31,5 +29,9 @@ class User < ApplicationRecord
     self.posts_counter ||= 0
     self.role ||= 'default'
     self.bio ||= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  end
+
+  def authenticate(password)
+    valid_password?(password)
   end
 end

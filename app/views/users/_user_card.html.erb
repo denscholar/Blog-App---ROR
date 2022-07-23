@@ -1,10 +1,10 @@
 <div>
   <div>
-    <%= image_tag @current_user.photo, alt: "#{current_user.name}'s photo", :style => "width: 100px;" %>
+    <%= image_tag user.photo, alt: "#{user.name}'s photo", :style => "width: 100px;" %>
   </div>
   <div>
-    <%= tag.h1(@current_user.name) %>
-    <p>Number of posts: <%= tag.span(@current_user.posts_counter) %></p>
+    <%= tag.h1(user.name) %>
+    <p>Number of posts: <%= tag.span(user.posts_counter) %></p>
   </div>
-  <%= link_to '', user_path(@current_user.id), id: "link_user-#{current_user.id}" %>
+  <%= link_to '', user_path(user.id), id: "link_user-#{user.id}" %>
 </div>

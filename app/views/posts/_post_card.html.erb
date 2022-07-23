@@ -1,17 +1,19 @@
 <div>
-  <%= link_to tag.h2(post.title + (detailed ? " by #{post.user.name}" : '')), user_post_path(post.user.id, post.id), class: 'link', id: "link_post-#{post.id}" %>
+<%= link_to tag.h2(post.title, class: 'card__title'), user_post_path(post.user.id, post.id), class: 'link' %>
   <%= content_tag(:div, post.text, class: ['card__text', ('truncated-text' unless detailed)]) %>
   <div class="card__counters <%= 'card__counters-detailed' if detailed %>">
     <div class="counter__comments">
-      <%= button_to "Comments: #{post.comments_counter}", new_post_comment_path(post.id), method: :get, id: "comments_post-#{post.id}" %>
+      <%= button_to 'Comments: ', new_post_comment_path(post.id), method: :get %>
+      <%= tag.span(post.comments_counter) %>
     </div>
-    <div class="counter__likes">
+   <div class="counter__likes">
       <% like = @current_user.likes.find_by(post: post) %>
       <% if like.nil? %>
-        <%= button_to "Likes: #{post.likes_counter}", post_likes_path(post.id), params: { like: { post_id: post.id }}, method: :post, id: "likes_post-#{post.id}" %>
+        <%= button_to 'Likes:', post_likes_path(post.id), params: { like: { post_id: post.id }}, method: :post %>
       <% else %>
-        <%= button_to "Unlike: #{post.likes_counter}", post_like_path(post.id, like.id), params: { like: { post_id: post.id, like_id: like.id }} , method: :delete, id: "likes_post-#{post.id}" %>
+        <%= button_to 'Unlike:', post_like_path(post.id, like.id), params: { like: { post_id: post.id, like_id: like.id }} , method: :delete %>
       <% end %>
+      <%= tag.span(post.likes_counter) %>
     </div>
     <% if can? :destroy, post %>
     <div class="owner__admin">

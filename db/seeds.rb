@@ -1,34 +1,70 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+# #   Character.create(name: "Luke", movie: movies.first)
 
-# first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-# second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
-
-# User
-# first_user = User.create!(name: 'Tom', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1', posts_counter: 0, bio: 'Teacher from Mexico.')
-# second_user = User.create!(name: 'John Smith', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1', posts_counter: 0, bio: 'Doctor from Spain.')
-# third_user = User.create!(name: 'Noah', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1', posts_counter: 0, bio: 'Doctor from Mexico.')
-# fourth_user = User.create!(name: 'Ann Charlotte', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1', posts_counter: 0, bio: 'Teacher from Mexico.')
-
-# Posts
-# first_post = Post.create!(user_id: first_user.id, title: 'Hello', text: 'I am the first user', comments_counter: 0, likes_counter: 0,)
-# second_post = Post.create!(user_id: second_user.id, title: 'Hi', text: 'I am the second user', comments_counter: 0, likes_counter: 0,)
-# third_post = Post.create!(user_id: third_user.id, title: 'Hi there', text: 'I am the third user', comments_counter: 0, likes_counter: 0,)
-# fourth_post = Post.create!(user_id: fourth_user, title: 'Hello!', text: 'I am the forth user', comments_counter: 0, likes_counter: 0,)
-
-# Comments
-# Comment.create!(post_id: first_post.id, user_id: first_user.id, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
-# Comment.create!(post_id: first_post.id, user_id: second_user.id, text: 'Hi Tom!')
-# Comment.create!(post_id: first_post.id, user_id: first_user.id, text: 'Great Post')
-# Comment.create!(post_id: second_post.id, user_id: fourth_user.id, text: 'Nice Content, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
-# Comment.create!(post_id: third_post.id, user_id: third_user.id, text: 'Hello there!')
-# Comment.create!(post_id: first_post.id, user_id: first_user.id, text: 'Hi, Lorem ipsum dolor sit amet')
-# Comment.create!(post_id: first_post.id, user_id: first_user.id, text: 'Hello, Lorem ipsum dolor sit amet')
-# Comment.create!(post_id: fourth_post.id, user_id: first_user.id, text: 'Like the post, Lorem ipsum dolor sit amet')
-# Comment.create!(post_id: first_post.id, user_id: first_user.id, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
-# Comment.create!(post_id: first_post.id, user_id: first_user.id, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+# first_user = User.create!(
+#     name: 'Tom',
+#     photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+#     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#     posts_counter: 0, email: 'tomtom@gmail.com', encrypted_password: 'A2b3c7V4$')
+  
+#   second_user = User.create!(
+#     name: 'Lilly',
+#     photo: 'https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+#     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#     posts_counter: 0, email: 'elililly@gmail.com', encrypted_password: 'B2z3ck8C#')
+  
+#   # POSTS
+#   first_post = Post.create!(user_id: first_user, title: 'Hello first post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   second_post = Post.create!(user_id: first_user, title: 'Hello second post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   third_post = Post.create!(user_id: first_user, title: 'Hello third post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   fourth_post = Post.create(user_id: first_user, title: 'Hello fourth post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   fifth_post = Post.create(user_id: second_user, title: 'Hello fifth posts',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   sixth_post = Post.create(user_id: second_user, title: 'Hello sixth post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   seventh_post = Post.create(user_id: second_user, title: 'Hello seventh post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   eighth_post = Post.create(user_id: second_user, title: 'Hello eighth post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+#   ninth_post = Post.create(user_id: second_user, title: 'Hello ninth post',
+#   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+#   comments_counter: 0, likes_counter: 0)
+  
+  
+  
+#   # COMMENTS
+#   Comment.create(post: first_post, user_id: second_user, text: 'In tincidunt odio vel turpis auctor, at gravida lacus semper. Maecenas aliquet ac eros vel accumsan. Vestibulum tristique dolor quis.' )
+  
+#   Comment.create(post: first_post, user_id: second_user, text: 'Maecenas varius vehicula imperdiet. Praesent eu blandit urna. Vestibulum porttitor semper augue, nec mollis ligula commodo ut. Nulla et aliquet.' )
+  
+#   Comment.create(post: first_post, user_id: second_user, text: 'Maecenas varius vehicula imperdiet. Praesent eu blandit urna. Vestibulum porttitor semper augue, nec mollis ligula commodo ut. Nulla et aliquet.' )
+  
+#   Comment.create(post: second_post, user_id: second_user, text: 'Vestibulum venenatis suscipit tellus sed molestie. Phasellus ullamcorper odio at leo tempor placerat. Ut a pretium lorem. Nam mollis sagittis.' )
+  
+#   Comment.create(post: fifth_post, user_id: first_user, text: 'Sed nibh ipsum, gravida placerat nunc nec, auctor porttitor nisi. Donec elementum condimentum arcu eu lobortis. Morbi dictum efficitur mattis.')
+  
+#   Comment.create(post: seventh_post, user_id: second_user, text: 'Integer aliquam sollicitudin viverra. Integer id finibus ante. Vivamus auctor enim in purus malesuada eleifend. Donec in turpis accumsan, egestas.')
+  
+#   Comment.create(post: fourth_post, user_id: second_user, text: 'In tincidunt odio vel turpis auctor, at gravida lacus semper. Maecenas aliquet ac eros vel accumsan. Vestibulum tristique dolor quis.' )
+  
+#   Comment.create(post: fourth_post, user_id: second_user, text: 'Maecenas varius vehicula imperdiet. Praesent eu blandit urna. Vestibulum porttitor semper augue, nec mollis ligula commodo ut. Nulla et aliquet.' )
+  
+#   Comment.create(post: fourth_post, user_id: second_user, text: 'Maecenas varius vehicula imperdiet. Praesent eu blandit urna. Vestibulum porttitor semper augue, nec mollis ligula commodo ut. Nulla et aliquet.' )
+  

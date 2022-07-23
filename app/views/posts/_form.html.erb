@@ -1,16 +1,24 @@
 <%= form_with model: post do |form| %>
-    <div>
-        <%= form.label :title %> <br>
-        <%= form.text_field :title, placeholder: 'title' %>
-    </div>
+
+    <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %> S
+      </div>
+    <% end %>       
+  <% end %>
 
     <div>
-        <%= form.label :content %> <br>
-        <%= form.text_area :content, placeholder:"Content of the post"%>
-    </div>
+    <% form.label :title %>
+    <%= form.text_field :title, class:"form-control", placeholder:" Title of the post" %>
+  </div>
 
-    <div>
-        <%= form.submit id='Create Post' %>
-    </div>
+  <div>
+    <%= form.text_field :text, class:"form-control", placeholder:"Content of the post" %>
+  </div>
+
+  <div>
+    <%= form.submit class:'btn btn-primary' %>
+  </div>
   
 <% end %>
