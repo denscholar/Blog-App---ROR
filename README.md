@@ -42,11 +42,18 @@ To auto-correct Rubocop offenses run: `rubocop --auto-correct-all`
 
 ## Author
 
-*Dennis Akagha*
+👤 **Dennis Akagha**
 
 - GitHub: [@denscholar](https://github.com/denscholar)
 - Twitter: [@denscholar](https://twitter.com/dennisakagha)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/dennisakagha/)
+
+👤 **RaoAkif**
+
+- GitHub: [@raoakif](https://github.com/RaoAkif)
+- Twitter: [@raoakif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+
 
 ## Contributing
 
