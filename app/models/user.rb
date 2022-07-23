@@ -34,5 +34,4 @@ class User < ApplicationRecord
   def authenticate(password)
     valid_password?(password)
   end
-
 end

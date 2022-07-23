@@ -53,6 +53,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'letter_opener'
   gem 'rails-controller-testing'
   gem 'rspec-core'
@@ -60,7 +61,6 @@ group :development, :test do
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rspec-support'
-  gem 'dotenv-rails'
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
   # Capybara, the library that allows us to interact with the browser using Ruby
