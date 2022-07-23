@@ -30,4 +30,9 @@ class User < ApplicationRecord
     self.role ||= 'default'
     self.bio ||= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   end
+
+  def authenticate(password)
+    valid_password?(password)
+  end
+
 end

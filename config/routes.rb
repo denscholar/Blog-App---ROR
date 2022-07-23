@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  post 'api/login', to: 'auth#login', default: {:format => :json}
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index show]

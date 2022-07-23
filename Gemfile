@@ -60,6 +60,7 @@ group :development, :test do
   gem 'rspec-mocks'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rspec-support'
+  gem 'dotenv-rails'
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
   # Capybara, the library that allows us to interact with the browser using Ruby
@@ -87,3 +88,5 @@ end
 gem 'cancancan'
 gem 'devise'
 gem 'ffi'
+gem 'jwt', '~> 2.2'
+gem 'rack-cors'
