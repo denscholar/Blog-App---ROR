@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :likes, class_name: 'Like', foreign_key: 'user_id', inverse_of: :user, dependent: :destroy
 
   validates :name, presence: true
+  validates :bio, presence: true
+  validates :photo, presence: true
   validates :posts_counter, presence: true, numericality: { only_integer: true },
                             comparison: { greater_than_or_equal_to: 0 }
 
@@ -18,6 +20,12 @@ class User < ApplicationRecord
 
   def posts_desc_order
     posts.order(created_at: :desc)
+  end
+
+  def generate_jwt
+    JWT.encode({ id:,
+                 exp: 60.days.from_now.to_i },
+               Rails.application.secrets.secret_key_base)
   end
 
   private
